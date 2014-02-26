@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+cp $1 elasticsearch/config/elasticsearch.yml
+cp logging.yml elasticsearch/config/logging.yml
+
+exec ./elasticsearch/bin/elasticsearch
